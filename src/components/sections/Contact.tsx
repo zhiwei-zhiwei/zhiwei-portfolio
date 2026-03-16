@@ -222,10 +222,10 @@ export default function Contact() {
                 {[
                   { href: SITE_CONFIG.github, Icon: Github, label: 'GitHub' },
                   { href: SITE_CONFIG.linkedin, Icon: Linkedin, label: 'LinkedIn' },
-                  ...SITE_CONFIG.itchio.map((url, i) => ({
+                  ...SITE_CONFIG.itchio.map((url) => ({
                     href: url,
                     Icon: Gamepad2,
-                    label: `Itch.io ${i + 1}`,
+                    label: 'Itch.io',
                   })),
                 ].map(({ href, Icon, label }) => (
                   <motion.a
