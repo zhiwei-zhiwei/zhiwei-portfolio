@@ -1,0 +1,38 @@
+export const projects = [
+  {
+    title: "Personal Portfolio Website",
+    period: "March 2026 – Present",
+    tech: ["Next.js 14", "TypeScript", "Three.js", "Framer Motion", "Tailwind CSS", "Docker"],
+    description: "Engineered a single-page portfolio with an interactive Three.js particle network hero, scroll-driven animations, and glassmorphism UI. Built reusable component architecture across 10+ sections with custom CSS animations for 3D card tilt effects and animated timeline. Containerized with Docker and configured standalone Next.js output for optimized deployment.",
+    github: "https://github.com/zhiwei-zhiwei",
+    live: null,
+    emoji: "🌐",
+  },
+  {
+    title: "Belay (Slack Clone)",
+    period: "Jan 2024 – March 2024",
+    tech: ["React", "Flask", "SQLite3"],
+    description: "Real-time chat app with auth, threading, live updates. 200+ active users.",
+    github: "https://github.com/zhiwei-zhiwei",
+    live: null,
+    emoji: "💬",
+  },
+  {
+    title: "Law Study Tool — MBE Practice App",
+    period: "May 2025 – Jun 2025",
+    tech: ["Streamlit", "Tesseract OCR", "Python", "PDF Processing"],
+    description: "Web-based study platform processing 2,000+ PDF legal documents with OCR and intelligent text analysis. Features automated answer detection, multi-user progress tracking, caching optimization, and a real-time analytics dashboard.",
+    github: null,
+    live: "https://crunyqkeasfqkn4rvmsoaj.streamlit.app",
+    emoji: "⚖️",
+  },
+  {
+    title: "Distributed File System",
+    period: "Oct 2022 – Dec 2022",
+    tech: ["C", "UDP", "Concurrent I/O"],
+    description: "UDP-based log-structured file server with concurrent client support, checkpoint regions, inode maps, and idempotent operations.",
+    github: "https://github.com/zhiwei-zhiwei",
+    live: null,
+    emoji: "📂",
+  },
+]
