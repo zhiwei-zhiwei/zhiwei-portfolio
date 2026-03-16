@@ -41,7 +41,7 @@ export default function Footer() {
             >
               <Linkedin size={18} />
             </motion.a>
-            {SITE_CONFIG.itchio.map((url, i) => (
+            {SITE_CONFIG.itchio.map((url) => (
               <motion.a
                 key={url}
                 whileHover={{ scale: 1.15, color: '#ffb300' }}
@@ -49,7 +49,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-colors duration-200 text-xs font-mono"
-                aria-label={`Itch.io ${i + 1}`}
+                aria-label="Itch.io"
               >
                 <Gamepad2 size={18} />
               </motion.a>
