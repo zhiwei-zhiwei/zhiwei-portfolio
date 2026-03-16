@@ -13,10 +13,11 @@ interface FormState {
   name: string
   email: string
   message: string
+  honeypot: string
 }
 
 export default function Contact() {
-  const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' })
+  const [form, setForm] = useState<FormState>({ name: '', email: '', message: '', honeypot: '' })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
@@ -34,7 +35,7 @@ export default function Contact() {
       const data = await res.json()
       if (data.success) {
         setSuccess(true)
-        setForm({ name: '', email: '', message: '' })
+        setForm({ name: '', email: '', message: '', honeypot: '' })
       } else {
         setError('Something went wrong. Please try again.')
       }
@@ -102,6 +103,18 @@ export default function Contact() {
                     onSubmit={handleSubmit}
                     className="space-y-4"
                   >
+                    {/* Honeypot — hidden from humans, bots fill this */}
+                    <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }} aria-hidden="true">
+                      <input
+                        type="text"
+                        name="website"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={form.honeypot}
+                        onChange={(e) => setForm({ ...form, honeypot: e.target.value })}
+                      />
+                    </div>
+
                     <div>
                       <label className="block text-xs text-[var(--text-muted)] font-mono uppercase tracking-wider mb-2">
                         Name
